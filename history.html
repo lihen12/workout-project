@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <title>Track Placeholder</title>
+  <title>Workout Placeholder</title>
   
   <!-- Required Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles/styles.css">
   
   <!-- Google Fonts Styles -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -20,12 +20,12 @@
 <body>
   <!-- Main Header -->
   <header>
-    <h1>Track Placeholder Title</h1>
+    <h1>History Placeholder Title</h1>
   </header>
   
   <!-- Main NAV -->
-  <!-- Will contain general site function navigation to current workout type, to go back to workout plan, or to view other workouts to track -->
-  <!-- Will be in the form of a dropdown hamburger icon -->
+  <!-- Will contain general site function navigation to workout information and calendar -->
+  
   <nav class="main-nav navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">HWorkouts</a>
     
@@ -38,11 +38,11 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="track.html">Track <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="history.html">History <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="track.html">Track <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">History <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <form class="form-inline" action="/action_page.php">
@@ -64,10 +64,6 @@
       </ul>
     </div>
 </nav>
-  <!-- Sandwich for settings -->
-  
-  <!-- Secondary NAV -->
-  <!-- Allows user to go to view other information in regards to current workout type -->
   
   <!-- Sandwich for settings -->
   
@@ -78,93 +74,48 @@
       <li class="nav-item"></li>
       
       <li class="nav-item">
-        <a class="nav-link active" href="#">Track</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">History</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Graph</a>
+        <a class="nav-link active" href="#">November 25th, 2018</a>
       </li>
       
       <li class="nav-item"></li>
     </ul>
   </div>
   
-  <!-- Main body of workout type track -->
+  <!-- Main body of workout plan page -->
   <div class="content-wrap container">
-    <!-- This section will be for user input -->
-    <section class="input-content-wrapper row">
-      <article class="col"></article>
-      <!-- Article that allows for user input of weight -->
-      <article class="track-input col">
-        <!-- Div that contains wrapper for weight content -->
-        <div class="weight-wrapper">
-          <h2>Weight (in lbs)</h2>
-
-          <!-- Content wrap of weight div, format is XXX.XX -->
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">-</button>
-            
-            <button type="button" class="btn btn-secondary">Weight</button>
-            
-            <button type="button" class="btn btn-secondary">+</button>
+    <section class="row">
+      <!-- Article that contains one workout type added to plan -->
+      <article class="col">
+        <label>Select Date: </label>
+          <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+            <input class="form-control" type="text" readonly />
+            <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
           </div>
-        </div>
-        
-        <!-- Div that contains wrapper for reps content -->
-        <div class="reps-wrapper">
-        <h2>Reps</h2>
-        
-          <!-- Content wrap of reps div, format is XXX whole numbers -->
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">-</button>
-            
-            <button type="button" class="btn btn-secondary">Reps</button>
-            
-            <button type="button" class="btn btn-secondary">+</button>
-          </div>
-        </div>
-        
-        <!-- This article contains the ability to save or clear the user inputs -->
-        <!-- Saving user input displays it in a summary below user-input page -->
-        <div class="save-clear-input">
-          <button>Save</button>
-          
-          <button>Clear</button>
-        </div>
       </article>
       
-      <!-- This article contains the summary of user-input -->
       <article class="col">
-        <div class="summary-titles">
-          <p>#</p>
-          <p>Weight</p>
-          <p>Reps</p>
-        </div>
-        
-        <div class="user-summary-info">
-          <div class="summary-row">
-            <p>1</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-          
-          <div class="summary-row">
-            <p>2</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-          
-          <div class="summary-row">
-            <p>3</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-        </div>
+        <h2>Workout 1 Placeholder</h2>
+        <h3>Weight (in lbs)</h3>
+          <p>135</p>
+          <p>135</p>
+          <p>135</p>
+        <h3>Reps</h3>
+          <p>5</p>
+          <p>5</p>
+          <p>5</p>
       </article>
+      
+      <article class="col"></article>
+    </section>
+    
+    <section class="row">
+      <article class="col"></article>
+      
+      <article class="col"></article>
     </section>
   </div>
+  
+  <button type="submit" onclick="userAction()">Here</button>
   
   <!-- Footer that will have Copyright, Contact Us, and Social Media Share buttons -->
   <div class="container">
@@ -182,10 +133,17 @@
       <div class="col"></div>
     </div>
   </div>
-  
+  <script src="scripts/service-call.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <script>$(function () {
+  $("#datepicker").datepicker({ 
+        autoclose: true, 
+        todayHighlight: true
+  }).datepicker('update', new Date());
+});</script>
 </body>
 </html>

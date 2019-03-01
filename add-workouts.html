@@ -20,7 +20,7 @@
 <body>
   <!-- Main Header -->
   <header>
-    <h1>Track Placeholder Title</h1>
+    <h1>Add Workouts Placeholder Title</h1>
   </header>
   
   <!-- Main NAV -->
@@ -57,7 +57,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="view-workouts.html">View Workouts</a>
-            <a class="dropdown-item" href="add-workouts.html">Add Workouts</a>
+            <a class="dropdown-item" href="#">Add Workouts</a>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
@@ -71,98 +71,55 @@
   
   <!-- Sandwich for settings -->
   
-  <!-- Secondary NAV -->
-  <!-- Allows user to go to yesterday or tomorrow's workout information -->
-  <div class="secondary-nav">
-    <ul class="nav nav-pills nav-justified">
-      <li class="nav-item"></li>
-      
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Track</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">History</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Graph</a>
-      </li>
-      
-      <li class="nav-item"></li>
-    </ul>
-  </div>
-  
   <!-- Main body of workout type track -->
   <div class="content-wrap container">
     <!-- This section will be for user input -->
     <section class="input-content-wrapper row">
-      <article class="col"></article>
-      <!-- Article that allows for user input of weight -->
-      <article class="track-input col">
-        <!-- Div that contains wrapper for weight content -->
-        <div class="weight-wrapper">
-          <h2>Weight (in lbs)</h2>
-
-          <!-- Content wrap of weight div, format is XXX.XX -->
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">-</button>
-            
-            <button type="button" class="btn btn-secondary">Weight</button>
-            
-            <button type="button" class="btn btn-secondary">+</button>
-          </div>
+      <aside class="col">
+        <div class="d-flex flex-column bd-highlight mb-3">
+          <div class="p-2 bd-highlight"><a href="#">Legs</a></div>
+          <div class="p-2 bd-highlight"><a href="#">Back</a></div>
+          <div class="p-2 bd-highlight"><a href="#">Arms</a></div>
+          <div class="p-2 bd-highlight"><a href="#">Chest</a></div>
+          <div class="p-2 bd-highlight"><a href="#">Shoulders</a></div>
         </div>
         
-        <!-- Div that contains wrapper for reps content -->
-        <div class="reps-wrapper">
-        <h2>Reps</h2>
-        
-          <!-- Content wrap of reps div, format is XXX whole numbers -->
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">-</button>
-            
-            <button type="button" class="btn btn-secondary">Reps</button>
-            
-            <button type="button" class="btn btn-secondary">+</button>
+      </aside>
+      <!-- Article that shows workouts -->
+      <article class="col">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name:</label>
+            <input type="text" class="form-control" id="workoutName" aria-describedby="addWorkoutHelp" placeholder="Workout Name">
+            <small id="workoutName" class="form-text text-muted">Enter the name of the workout</small>
           </div>
-        </div>
-        
-        <!-- This article contains the ability to save or clear the user inputs -->
-        <!-- Saving user input displays it in a summary below user-input page -->
-        <div class="save-clear-input">
-          <button>Save</button>
           
-          <button>Clear</button>
-        </div>
+          <div>
+            <label for="categoryWorkout">Category:</label>
+              <select class="custom-select">
+                <option selected>Choose your Category</option>
+                <option value="legs">Legs</option>
+                <option value="back">Back</option>
+                <option value="arms">Arms</option>
+                <option value="chest">Chest</option>
+                <option value="shoulders">Shoulders</option>
+              </select>
+          </div>
+          
+          <div>
+            <label for="typeWorkout">Type:</label>
+              <select class="custom-select">
+                <label for="categoryWorkout">Type:</label>
+                <option selected>Choose your Type</option>
+                <option value="legs">Weight and Reps</option>
+              </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
       </article>
       
-      <!-- This article contains the summary of user-input -->
-      <article class="col">
-        <div class="summary-titles">
-          <p>#</p>
-          <p>Weight</p>
-          <p>Reps</p>
-        </div>
-        
-        <div class="user-summary-info">
-          <div class="summary-row">
-            <p>1</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-          
-          <div class="summary-row">
-            <p>2</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-          
-          <div class="summary-row">
-            <p>3</p>
-            <p>135</p>
-            <p>5</p>
-          </div>
-        </div>
-      </article>
+      <article class="col"></article>
     </section>
   </div>
   
